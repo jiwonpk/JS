@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        input:focus {
+            outline: none;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    아이디<input type="text" id="id" style="border: 3px solid #000;">
+    <p id="id1"></p>
+
+
+    <script>
+        var id = document.querySelector("#id");
+        var id1 = document.querySelector("#id1");
+        var color = document.getElementById("color");
+        id.onkeyup = function(){
+
+            if(id.value.length < 4){
+                id.style.borderColor = "red";
+                id1.innerHTML= "오이오이 아이디4글자이상 이라구!";   
+                   
+            }else{
+                id.style.borderColor = "blue";
+                console.log(id.style.borderColor);
+                id1.innerHTML="";
+                
+            }
+
+        }
+    </script>
+</body>
+</html>

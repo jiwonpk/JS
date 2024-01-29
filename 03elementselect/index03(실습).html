@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    ID: <input type="text" id="me">
+    기억하기<input type="checkbox" id="me2">
+    <button id="me3">확인</button >
+
+    <script>
+        var me = document.getElementById("me")
+        var me2 = document.getElementById("me2")
+        var me3 = document.getElementById("me3")
+
+        me3.onclick = function() {
+            alert(me.value + me2.checked);
+        }
+
+    </script>
+
+    <hr>
+
+
+    <h3 id="hi2">한국어 입니다</h3>
+    <h3>힌트: select는 change이벤트</h3>
+
+    <select id="hi">
+        <option value="coco">안녕하세요</option>
+        <option value="coco2">hello</option>
+        <option value="coco3">사왓디캅</option>
+        <option value="coco4">고니찌와</option>
+    </select>
+
+    <script>
+        var change = document.getElementById("hi")
+        change.onchange = function() {
+
+        }
+        
+    </script>
+
+
+</body>
+</html>
