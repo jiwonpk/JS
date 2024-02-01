@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        th, td {
+            border: 1px solid #000;
+            text-align: center;
+            padding: auto;
+            width: auto;
+        }
+        th {
+            background-color: rgb(248, 136, 188);
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="btn5" style="background-color: rgb(255, 152, 224);">5개추가하기</button> <button type="button" id="btn1"style="background-color: ;">1개추가하기</button>
+    <table class="table">
+        <tr>
+            <th>교시</th>
+            <th>훈련과목</th>
+            <th>담당자</th>
+            <th>훈련내용</th>
+        </tr>
+        <tr>
+            <th><input type="text"></th>
+            <th><input type="text"></th>
+            <th><input type="text"></th>
+            <th><input type="text"></th>
+        </tr>
+      
+    </table>
+
+    <script>
+        var btn5 = document.getElementById("btn5");
+        var btn1 = document.getElementById("btn1"); 
+        
+        var table = document.querySelector(".table");
+        
+        btn5.onclick = function (){
+            for( var j = 1; j <= 5; j++){
+            var tr = document.createElement("tr");
+            for(var i = 1; i <= 4; i++){
+                var th = document.createElement("th");
+                var input = document.createElement("input");
+                th.appendChild(input);
+                tr.appendChild(th);
+
+            }
+            
+            table.appendChild(tr);
+            }
+         }
+        btn1.onclick = function (){
+            var tr = document.createElement("tr");
+            for(var i = 1; i <= 4; i++){
+                var th = document.createElement("th");
+                var input = document.createElement("input");
+                th.appendChild(input);
+                tr.appendChild(th);
+
+            }
+            
+            table.appendChild(tr);
+        }
+    
+
+
+    </script>
+
+
+</body>
+</html>

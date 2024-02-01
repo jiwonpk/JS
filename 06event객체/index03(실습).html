@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>다중이벤트 처리</h3>
+    <div class="box">
+        <img src="img/1.jpg" width="200px" height="200px">  
+        <img src="img/2.jpg" width="200px" height="200px">  
+        <img src="img/3.jpg" width="200px" height="200px"> 
+        <img src="img/4.jpg" width="200px" height="200px"> 
+    </div>
+
+    <h3>결과:</h3>
+    <div class="box1">
+        <img src="img/1.jpg" width="700px" height="500px" class="img">
+    </div>
+
+    <script>
+        var box = document.querySelector(".box");
+        var img = document.querySelector(".img");
+
+
+        box.onclick = function(e){
+        
+            img.src = e.target.src;
+            console.dir(e.target);
+            if(e.target.tagName != "IMG") return;
+
+            img.src = e.target.src;    
+        }
+
+    </script>
+
+</body>
+</html>

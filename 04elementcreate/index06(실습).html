@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="todo1" placeholder="이름을 입력하세요"> 
+    <button type="button" id="btn1">확인</button><br>
+    <div class="title"></div>
+
+    <input type="test" class="todo" placeholder="당신의 할일을적으세요">
+    <button type="button" id="btn">확인</button>
+    
+    
+    
+
+    <ul class="list">
+    </ul>
+
+    
+    <script>
+        var btn1 = document.getElementById("btn1");
+        var btn = document.getElementById("btn");
+        var todo = document.querySelector(".todo");
+        var list = document.querySelector(".list");
+        var todo1 = document.querySelector(".todo1");
+        var title = document.querySelector(".title");
+
+
+        var index = 0; 
+
+        btn1.onclick = function () {
+            title.innerHTML = todo1.value + '님 Work-List'; 
+            todo1.style.display = "none";
+            btn1.style.display = "none";
+        }
+
+        btn.onclick = function () {
+
+            var li = document.createElement("li");
+            li.innerHTML = todo.value + "<button onclick='remove(this)'>X</button>";
+            list.appendChild(li);
+
+
+        }
+        
+        function remove(x) {
+           x.parentElement.remove();
+            
+        }
+
+    </script>
+    
+</body>
+</html>
